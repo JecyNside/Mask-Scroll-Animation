@@ -1,1 +1,1 @@
-# Template React + JavaScript + Tailwind CSS
+# Mask + ScrollTrigger - Animation
