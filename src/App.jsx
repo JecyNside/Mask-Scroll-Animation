@@ -1,4 +1,3 @@
-import ReactLenis from "lenis/react";
 import HeroVideo from "./assets/videos/HeroVideo.mp4";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -31,7 +30,7 @@ export default function App() {
         const splitText = new SplitText("h1", { type: "words" });
 
         tl.from(splitText.words, {
-          yPercent: isDesktop ? 140 : 235, // 140 EN DESKTOP || 235 EN MOBILE
+          yPercent: isDesktop ? 150 : 235, // 150 EN DESKTOP || 235 EN MOBILE
           duration: 1.5,
           stagger: 0.15,
           ease: "power3.inOut",
@@ -86,26 +85,24 @@ export default function App() {
   });
 
   return (
-    <ReactLenis root>
-      <main>
-        <section className="h-screen relative flex items-center justify-center bg-black">
-          <div className="flex w-full justify-center px-10">
-            <h1 className="flex flex-wrap gap-4 leading-none text-center lg:leading-normal w-full text-[85px] justify-center lg:gap-20 lg:text-[200px] font-Playfair text-white overflow-hidden">
-              Jèc YnS Ìdè
-            </h1>
-          </div>
-          <div className="home-intro">
-            <video
-              className="video"
-              loop
-              autoPlay
-              playsInline
-              muted
-              src={HeroVideo}
-            />
-          </div>
-        </section>
-      </main>
-    </ReactLenis>
+    <main className="h-full">
+      <section className="h-full relative flex items-center justify-center bg-black">
+        <div className="flex w-full justify-center px-10">
+          <h1 className="flex flex-wrap gap-4 leading-none text-center lg:leading-normal w-full text-[85px] justify-center lg:gap-20 lg:text-[200px] font-Playfair text-white overflow-hidden">
+            Jèc YnS Ìdè
+          </h1>
+        </div>
+        <div className="home-intro">
+          <video
+            className="video"
+            loop
+            autoPlay
+            playsInline
+            muted
+            src={HeroVideo}
+          />
+        </div>
+      </section>
+    </main>
   );
 }
